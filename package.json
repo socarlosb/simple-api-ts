@@ -1,0 +1,40 @@
+{
+  "name": "simple_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "A simple API base, with no views",
+  "scripts": {
+    "start:db": "docker run --rm -v db:/data/db  -p 27017:27017 -d --name db mongo",
+    "start": "nodemon -x ts-node src/server.ts",
+    "clean:dist": "rm -rf dist/",
+    "build:server": "tsc",
+    "build": "npm run clean:dist && npm run build:server"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Carlos Barbosa <socarlosb@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.5",
+    "@types/express": "^4.16.1",
+    "@types/mongoose": "^5.5.3",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^12.0.2",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.11",
+    "morgan": "^1.9.1",
+    "rotating-file-stream": "^1.4.1"
+  }
+}
