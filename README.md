@@ -1,5 +1,7 @@
 # Simple API
 
+A simple API base, using nodejs, typescript, mongodb. The idea is not to use views in the server, instead create a "simple-client" app that "talks" to the the API.
+
 ## Scripts
 
 Install application dependencies
